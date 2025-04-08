@@ -4,6 +4,9 @@ import java.util.Random;
 
 import com.cardiogenerator.outputs.OutputStrategy;
 
+/**
+ * Simulates patient alerts being triggered and resolved over time
+ */
 public class AlertGenerator implements PatientDataGenerator {
 
     public static final Random randomGenerator = new Random();
@@ -13,6 +16,13 @@ public class AlertGenerator implements PatientDataGenerator {
         AlertStates = new boolean[patientCount + 1];
     }
 
+    /**
+     * Triggers or resolves alerts for a patient based on random chance
+     * Alerts have a low probability of being triggered and a high probability of resolving
+     *
+     * @param patientId      the patient's ID
+     * @param outputStrategy the output method to send the alert
+     */
     @Override
     public void generate(int patientId, OutputStrategy outputStrategy) {
         try {

@@ -7,17 +7,33 @@ import java.nio.file.Paths;
 import java.nio.file.StandardOpenOption;
 import java.util.concurrent.ConcurrentHashMap;
 
+/**
+ * Writes patient data to a file. Each label gets its own file.
+ */
 public class FileOutputStrategy implements OutputStrategy {
 
     private String baseDirectory; // changed BaseDirectory to baseDirectory
 
     public final ConcurrentHashMap<String, String> fileMap = new ConcurrentHashMap<>(); // changed file_map to fileMap
 
+    /**
+     * Creates a file output strategy that writes to the given directory
+     *
+     * @param baseDirectory the folder to store data files
+     */
     public FileOutputStrategy(String baseDirectory) {
 
         this.baseDirectory = baseDirectory;
     }
 
+    /**
+     * Adds patient data to a file based on the label
+     *
+     * @param patientId the patient's ID
+     * @param timestamp the time the data was generated
+     * @param label     the type of data
+     * @param data      the actual data value
+     */
     @Override
     public void output(int patientId, long timestamp, String label, String data) {
         try {
