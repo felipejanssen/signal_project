@@ -66,3 +66,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Project Members
 - Student ID: 6384258
+
+
+## UML Diagrams
+UML diagrams added at https://github.com/felipejanssen/signal_project/tree/master/uml_models
