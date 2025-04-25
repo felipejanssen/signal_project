@@ -72,3 +72,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 UML diagrams added at https://github.com/felipejanssen/signal_project/tree/master/uml_models
 
 ## Code Coverage and Unit Testing
+Code Coverage report and unit testing verification can be found here: https://github.com/felipejanssen/signal_project/blob/master/codecoverage_unittesting/codecoverage_unittesting.pdf
