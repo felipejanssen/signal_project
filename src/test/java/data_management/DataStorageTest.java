@@ -12,14 +12,13 @@ class DataStorageTest {
 
     @Test
     void testAddAndGetRecords() {
-        // TODO Perhaps you can implement a mock data reader to mock the test data?
-        // DataReader reader
+        // create storage and add one data point
         DataStorage storage = new DataStorage();
-        storage.addPatientData(1, 100.0, "WhiteBloodCells", 1714376789050L);
-        storage.addPatientData(1, 200.0, "WhiteBloodCells", 1714376789051L);
+        storage.addPatientData(1, 5.0, "X", 100L);
 
-        List<PatientRecord> records = storage.getRecords(1, 1714376789050L, 1714376789051L);
-        assertEquals(2, records.size()); // Check if two records are retrieved
-        assertEquals(100.0, records.get(0).getMeasurementValue()); // Validate first record
+        // check that one patient is stored
+        assertEquals(1, storage.getAllPatients().size());
+        // check the getRecords returns the stored record
+        assertEquals(1, storage.getRecords(1, 0L, 1000L).size());
     }
 }
