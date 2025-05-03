@@ -73,3 +73,6 @@ UML diagrams added at https://github.com/felipejanssen/signal_project/tree/maste
 
 ## Code Coverage and Unit Testing
 Code Coverage report and unit testing verification can be found here: https://github.com/felipejanssen/signal_project/blob/master/codecoverage_unittesting/codecoverage_unittesting.pdf
+
+## All tests passed after implementing design patterns
+https://github.com/felipejanssen/signal_project/blob/master/codecoverage_unittesting/alltestspassedafterweek4.png
