@@ -27,7 +27,7 @@ public class FileDataReaderManualAlertTest {
         System.setOut(new PrintStream(out));
 
         // read data from directory
-        new FileDataReader(directory.toString()).readData(new DataStorage());
+        new FileDataReader(directory.toString()).readData(DataStorage.getInstance());
 
         // restore console
         System.setOut(old);

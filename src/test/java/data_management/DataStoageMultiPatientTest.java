@@ -9,7 +9,7 @@ public class DataStoageMultiPatientTest {
     @Test
     void testGetALlPatientsMultiple() {
         // adding data for two different patients
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance();
         storage.addPatientData(1, 10, "X", 100L);
         storage.addPatientData(2, 20, "Y", 200L);
         // should have two patients now

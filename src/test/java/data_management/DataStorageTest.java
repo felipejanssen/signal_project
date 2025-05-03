@@ -1,6 +1,8 @@
 package data_management;
 
 import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import com.datamanagement.DataStorage;
@@ -10,10 +12,15 @@ import java.util.List;
 
 class DataStorageTest {
 
+    @BeforeEach
+    void clearStorage() {
+        DataStorage.getInstance().clearAll();
+    }
+
     @Test
     void testAddAndGetRecords() {
         // create storage and add one data point
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance();
         storage.addPatientData(1, 5.0, "X", 100L);
 
         // check that one patient is stored

@@ -12,7 +12,7 @@ public class DataStorageEdgeTest {
     @Test
     void testGetRecordsForMissingPatient() {
         // storage has no patients yet
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance();
         // asking for a non-existent patient should give empty list
         List<PatientRecord> recs = storage.getRecords(999, 0L, 1000L);
         assertTrue(recs.isEmpty(), "Expected empty list for missing patient");

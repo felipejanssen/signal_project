@@ -20,7 +20,7 @@ public class FileDataReaderTest {
         Files.write(f, line.getBytes());
 
         // read data from the temp directory
-        DataStorage storage = new DataStorage();
+        DataStorage storage = DataStorage.getInstance();
         new FileDataReader(directory.toString()).readData(storage);
 
         // verify the record was added

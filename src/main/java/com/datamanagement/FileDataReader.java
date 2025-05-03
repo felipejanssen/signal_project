@@ -14,6 +14,8 @@ public class FileDataReader implements DataReader{
 
     @Override
     public void readData(DataStorage storage) throws IOException {
+        storage.clearAll();
+
         File directory = new File(directoryPath); // create File object for the directory
 
         // check if the path is actually a directory

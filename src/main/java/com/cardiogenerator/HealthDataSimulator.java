@@ -31,11 +31,26 @@ import java.util.ArrayList;
  * to a console, file, TCP or WebSocket.
  */
 public class HealthDataSimulator {
+    private static HealthDataSimulator instance;
 
     private static int patientCount = 50; // Default number of patients
     private static ScheduledExecutorService scheduler;
     private static OutputStrategy outputStrategy = new ConsoleOutputStrategy(); // Default output strategy
     private static final Random random = new Random();
+
+    private HealthDataSimulator() {
+        this.patientCount = patientCount;
+        this.scheduler = null;
+        this.outputStrategy = new ConsoleOutputStrategy();
+    }
+
+    // global access point
+    public static HealthDataSimulator getInstance() {
+        if (instance == null) {
+            instance = new HealthDataSimulator();
+        }
+        return instance;
+    }
 
 
     /**
