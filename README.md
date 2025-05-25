@@ -76,3 +76,6 @@ Code Coverage report and unit testing verification can be found here: https://gi
 
 ## All tests passed after implementing design patterns
 https://github.com/felipejanssen/signal_project/blob/master/codecoverage_unittesting/alltestspassedafterweek4.png
+
+## All tests passed after week 5
+https://github.com/felipejanssen/signal_project/blob/master/codecoverage_unittesting/alltestspassedafterweek5.png
