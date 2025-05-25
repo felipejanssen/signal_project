@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.ConcurrentHashMap;
+
 import com.alerts.AlertGenerator;
 
 /**
@@ -14,6 +16,7 @@ import com.alerts.AlertGenerator;
  */
 public class DataStorage {
     private static DataStorage instance;
+
     private Map<Integer, Patient> patientMap; // Stores patient objects indexed by their unique patient ID.
 
     /**
@@ -21,8 +24,8 @@ public class DataStorage {
      * structure.
      */
     private DataStorage() {
-        this.patientMap = new HashMap<>();
-    }
+        this.patientMap = new ConcurrentHashMap<>();
+    } // made map thread safe
 
     public static DataStorage getInstance() {
         if (instance == null) {

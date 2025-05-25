@@ -60,4 +60,14 @@ public class FileDataReader implements DataReader{
             br.close();
         }
     }
+
+    @Override
+    public void start(DataStorage storage) throws IOException {
+
+    }
+
+    @Override
+    public void stop() throws IOException {
+
+    }
 }

@@ -24,8 +24,9 @@
         <dependency>
             <groupId>org.java-websocket</groupId>
             <artifactId>Java-WebSocket</artifactId>
-            <version>1.5.2</version>
+            <version>1.5.3</version>
         </dependency>
+
 
         <dependency>
             <groupId>org.junit.jupiter</groupId>
@@ -40,6 +41,7 @@
             <version>5.9.3</version> <!-- or 5.10.x -->
             <scope>test</scope>
         </dependency>
+
 
 
 
